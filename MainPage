@@ -1,0 +1,118 @@
+ <?php 
+
+   get_header(); 
+   
+   while(have_posts()){
+    the_post();  ?>
+    
+    <div class="page-banner">
+  <div class="page-banner__bg-image" style="background-image: url(<?php echo get_theme_file_uri('/images/banner.png') ?>);"></div>
+    <div class="page-banner__content container container--narrow">
+      <h1 class="page-banner__title t-center"><?php the_title();?></h1>
+      <div class="page-banner__intro t-center">
+      </div>
+    </div>  
+  </div>
+
+  <section>
+<div class="vertical-menu">
+     <h2 class="headline headline--medium t-center" style="background-color: white; color: #2D054D; padding-left:0; padding-right:0">CONTENTS</h2>
+     <h2 style= "padding-left: 20px; text-align-last: left;">
+      <ul>
+        <li><a href= "<?php echo site_url()?>"><h3><b>Home page</b></h3></a></li>
+        <li><a href="<?php echo site_url('/slicer-roadmap')?>"><h3><b>3D Slicer architecture</b></h3></a></li>
+        <li class= "b"><a href="<?php echo site_url('/slicer-roadmap')?>" style="text-decoration:none"><h3>MRML Scene</a></h3></li>
+        <li class= "c"><a href="<?php echo site_url('/slicer-roadmap')?>" style="text-decoration:none"><h3>MRML Nodes</a></h3></li>
+        <li class= "b"><a href="<?php echo site_url('/slicer-roadmap')?>" style="text-decoration:none"><h3>Widget</a></h3></li>
+        <li class= "b"><a href="<?php echo site_url('/slicer-roadmap')?>"style="text-decoration:none"><h3>logic</a></h3></li>
+
+        <li><a href="<?php echo site_url('/igt-module')?>"><h3><b>IGT module development</b></h3></a></li>
+        
+        <li class= "b"><a href="<?php echo site_url('/igt-module')?>" style="text-decoration:none"><h3>Slicer Components</a></h3></li>
+        <li class="c"><a href="<?php echo site_url('/igt-module')?>" style="text-decoration:none"><h3>What is a module?</a></h3></li>
+        <li class= "c"><a href="<?php echo site_url('/igt-module')?>" style="text-decoration:none"><h3>What is an extension?</a></h3></li>
+        <li class= "c"><a href="<?php echo site_url('/igt-module')?>" style="text-decoration:none"><h3>What is the SlicerIGT extension?</a> </h3></li>
+        <li class= "b"><a href="<?php echo site_url('/igt-module')?>" style="text-decoration:none"><h3>PlusServer Components</a></h3></li>
+        <li class= "c"><a href="<?php echo site_url('/igt-module')?>" style="text-decoration:none"><h3>What is the PlusServer?</a></h3></li>
+        <li class= "c"><a href="<?php echo site_url('/igt-module')?>" style="text-decoration:none"><h3>What is the OpenIGTLinkIF?</a></h3></li>
+        <li class= "b"><a href="<?php echo site_url('/igt-module')?>" style="text-decoration:none"><h3>Streaming images and tracking data</a></h3></li>
+        
+        <li><a href="<?php echo site_url('/igt-demo')?>"><h3><b>Examples and Demonstrations</b></h3></a></li>
+        
+        <li class= "b"><a href="<?php echo site_url('/igt-demo')?>" style="text-decoration:none"><h3>Overview</a></h3></li>
+        <li class= "c"><a href="<?php echo site_url('/igt-demo')?>" style="text-decoration:none"><h3>3D Slicer IGT extension installation</a></h3></li>
+        <li class= "c"><a href="<?php echo site_url('/igt-demo')?>" style="text-decoration:none"><h3>3D Slicer IGT extension installation</a></h3></li>
+        <li class= "b"><a href="<?php echo site_url('/igt-demo')?>" style="text-decoration:none"><h3>PlusServer Configuration Files</a></h3></li>
+        <li class= "c"><a href="<?php echo site_url('/igt-demo')?>" style="text-decoration:none"><h3>What is a configuration file?</a></h3></li>
+        <li class= "c"><a href="<?php echo site_url('/igt-demo')?>" style="text-decoration:none"><h3>Configuration file for OpenIGTLinkIF</a></h3></li>
+        <li class= "c"><a href="<?php echo site_url('/igt-demo')?>" style="text-decoration:none"><h3>Configuration file for "US Calibration module"</a></h3></li>
+        <li class= "c"><a href="<?php echo site_url('/igt-demo')?>" style="text-decoration:none"><h3>How to write your own configuration file</a></h3></li>
+        <li class= "b"><a href="<?php echo site_url('/igt-demo')?>" style="text-decoration:none"><h3>Calibration of ultrasound and tools</a></h3></li>
+        <li class= "c"><a href="<?php echo site_url('/igt-demo')?>" style="text-decoration:none"><h3>Demo 1: Pivot Calibration </a></h3></li>
+        <li class= "c"><a href="<?php echo site_url('/igt-demo')?>" style="text-decoration:none"><h3>Demo 2: Ultrasound probe calibration </a></h3></li>
+        <li class= "b"><a href="<?php echo site_url('/igt-demo')?>" style="text-decoration:none"><h3>Displaying a tracked calibrated needle</a></h3></li>
+        
+        <li><a href="<?php echo site_url('/create-module')?>"><h3><b>Create your own module</b></h3></a></li>
+        <li class= "b"><a href="<?php echo site_url('/create-module')?>"><h3>Development modes</a></h3></li>
+        <li class= "c"><a href="<?php echo site_url('/create-module')?>"><h3>Scipted modules</a></h3></li>
+        <li class= "c"><a href="<?php echo site_url('/create-module')?>"><h3>Loadable modules</a></h3></li>
+        <li class= "b"><a href="<?php echo site_url('/create-module')?>"><h3>Create a module</a></h3></li>
+        <li class= "b"><a href="<?php echo site_url('/create-module')?>"><h3>Add module to an extension</a></h3></li>
+    </ul>
+  </h2>
+  </div>
+
+  <div class="container container--narrow--content page-section">
+    
+    <?php
+      $theParent = wp_get_post_parent_id(get_the_ID());
+      if ($theParent){ ?>
+    	<div class="metabox metabox--position-up metabox--with-home-link">
+  		  <p><a class="metabox__blog-home-link" href="<?php echo get_permalink($theParent); ?>"><i class="fa fa-home" 
+  		  aria-hidden="true"></i> Back to <?php echo get_the_title($theParent); ?></a> <span class="metabox__main"><?php the_title(); ?></span></p>
+		</div>    
+    	<?php }
+	?>
+    
+    <?php 
+    $testArray = get_pages(array(
+     'child_of' => get_the_Id() 
+    )); 
+
+    if ($theParent or $testArray){ ?>
+
+    <div class="page-links">
+      <h2 class="page-links__title"><a href="<?php echo get_permalink($theParent)?>"><?php echo get_the_title($theParent); ?></a></h2>
+      <ul class="min-list">
+      	<?php 
+          
+          if ($theParent){
+          	$findChildrenOf = $theParent; 
+      		} else {
+ 			$findChildrenOf = get_the_ID();
+      		}
+
+  		  wp_list_pages(array(
+      	    'title_li' => NULL, 
+      	    'child_of' => $findChildrenOf,
+      	    'sort_column' => 'menu_order'
+      	    )); 
+      	?> 
+      </ul>
+    </div> 
+    <?php } ?>
+
+    <div class="generic-content">
+     <?php the_content();?>
+    </div>
+
+  </div>
+  </section>
+    
+   <?php }
+
+   get_footer(); 
+
+?>
+
+
